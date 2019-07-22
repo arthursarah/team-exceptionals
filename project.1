@@ -1,0 +1,8 @@
+import pyowm
+owm = pyowm.OWM('3ddfd0db22493a8c1d8fd92dd1e221fa')
+observation = owm.weather_at_place('tema,accra')
+w = observation.get_weather()
+
+print (w.get_wind()['deg'])
+print(w.get_temperature())
+print(w.get_humidity())
